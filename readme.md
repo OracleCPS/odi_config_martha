@@ -28,7 +28,7 @@ Log into Oracle cloud and navigate to OCI
 3.  Provide name. For example: osc121018VCNpolicy
 4.  Provide description
 5.  Leave "Keep Policy Current"
-6.  Add the following Statements
+6.  Add the following Statements2
 - Allow service PSM to inspect vcns in compartment \<compartment\_name\>
 - Allow service PSM to use subnets in compartment \<compartment\_name\>
 - Allow service PSM to use vnics in compartment \<compartment\_name\>
