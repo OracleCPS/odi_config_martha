@@ -39,26 +39,18 @@ Log into Oracle cloud and navigate to OCI
 ### **Create a Storage Bucket**
 
 1.  Navigate Menu \> Object Storage \> Object Storage
-
 2.  Verify that your compartment is selected in the compartment drop down menu on the left side of your screen
-
 3.  Click on button "Create Bucket" at the top of the screen
-
 4.  Provide a name. For example: ODICS\_STORAGE1
-
 5.  Click on button "Create Bucket" at the bottom of the screen
 
 ### **Create the URL to the Storage Bucket**
 
 1.  While you are in the Storage Bucket screen copy the URL on top of your browser. It should look something like: <https://console.us-ashburn-1.oraclecloud.com/a/storage/objects>
-
 2.  Replace your information in the following URL: \>
-
-    a.  In our example region would be "us-ashburn-1"
-
-    b.  In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
-
-    c.  In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
+ a.  In our example region would be "us-ashburn-1"
+ b.  In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
+ c.  In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
 
 So the URL will look something like: <https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1>. Make a note of this will require it later in the process
 
