@@ -127,7 +127,6 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
     7. Software Release. For example: `Oracle Database 12c Release 2`
     8. Software Edition. For example: `Enterprise edition`
     9. Database type. For example: `Single Instance`
-
 ![](images/100/media/image1.png)
 
 5. Click on "Next" button located on the top right corner of the screen
