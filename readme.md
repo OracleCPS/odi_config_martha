@@ -352,7 +352,7 @@ Generate an authentication token for each user who created buckets or has permis
     2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
     3. Password. Provide the OAuth Token generated in section `Setup credential to have access to the bucket` step 10.
 
- 9. Go on with section "Installing ODI on the Oracle Java Cloud Service" but in step 6 of subsection "Installing Oracle Data Integrator" (Auto Updates Screen) do the following:
+9. Go on with section "Installing ODI on the Oracle Java Cloud Service" but in step 6 of subsection "Installing Oracle Data Integrator" (Auto Updates Screen) do the following:
 
     1. Click on `Search My Oracle Support for updates`
     2. Enter username (your user name for Oracle Support)
