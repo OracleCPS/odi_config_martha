@@ -130,9 +130,9 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 ![](images/100/media/image1.png)
 
-5. Click on "Next" button located on the top right corner of the screen
+5\. Click on "Next" button located on the top right corner of the screen
 
-6. Provide:
+6\. Provide:
 
  a. DB Name. Leave default (ORCL). Make a note of this
  b. PDB Name. Leave default (PDB1). Make a note of this
@@ -148,9 +148,9 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 ![](images/100/media/image2.png)
 
-7. Click on "Next" button located on the top right corner of the screen. If there is a problem with the access to the storage, an error message will be sent to screen.
+7\. Click on "Next" button located on the top right corner of the screen. If there is a problem with the access to the storage, an error message will be sent to screen.
 
-8. If all verifications went OK, you will be in the Summary screen. Click on "Create" button. This process will take around 30 min
+8\. If all verifications went OK, you will be in the Summary screen. Click on "Create" button. This process will take around 30 min
 
 ## Prerequisites for a DBaaS in OCI
 
