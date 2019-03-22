@@ -314,9 +314,7 @@ Generate an authentication token for each user who created buckets or has permis
 7. Click on "Advanced" tab
 
 8. Follow <https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1> from section "Provisioning the Oracle Java Cloud Instance" step 4 onwards.
-
 **Note:** For backup destination use the following:
-
     1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
     2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
     3. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
@@ -332,7 +330,7 @@ Generate an authentication token for each user who created buckets or has permis
 4. Select "Java" from the drop-down list
 ![](images/100/media/image6.png)
 
-5.  Provide:
+5. Provide:
 
     1. Instance Name. For example: JCSODICS
     2. Description
@@ -352,11 +350,11 @@ Generate an authentication token for each user who created buckets or has permis
 **Note:** For backup destination use the following:
      1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
      2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
-     3. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
+     3. Password. Provide the OAuth Token generated in section `Setup credential to have access to the bucket` step 10.
 
  9. Go on with section "Installing ODI on the Oracle Java Cloud Service" but in step 6 of subsection "Installing Oracle Data Integrator" (Auto Updates Screen) do the following:
 
-     1. Click on \"Search My Oracle Support for updates\"
+     1. Click on `Search My Oracle Support for updates`
      2. Enter username (your user name for Oracle Support)
      3. Enter password (your password for Oracle Support)
      4. Click on Search.
@@ -367,21 +365,13 @@ Generate an authentication token for each user who created buckets or has permis
     8. The installer will restart
 
 10. On step 7, do NOT click on button "View" but otherwise continue the installation steps as provided in the document
-
-**Important Note**
-
-Instead of performing steps in section "Starting the Administration Server"
-
-1. Execute command: cd /u01/data/domains/JCSODICS\_domain/bin
-
-2. Execute command: ./startWebLogic.sh &
-
-3. Continue to the next section of the web document `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html` "Post-Configuration Tasks".
-
-4. Before you execute the steps in the next section of the document "Starting the Servers", apply the ODI patch, following the steps in the next section
-
-    1. Execute command: cd /u01/app/oracle/middleware/odi/studio/bin
-    2. Execute command: ./odi
+**Important Note**  Instead of performing steps in section "Starting the Administration Server"
+    1. Execute command: cd /u01/data/domains/JCSODICS\_domain/bin
+    2. Execute command: ./startWebLogic.sh &
+    3. Continue to the next section of the web document `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html` "Post-Configuration Tasks".
+    4. Before you execute the steps in the next section of the document "Starting the Servers", apply the ODI patch, following the steps in the next section
+    Execute command: `cd /u01/app/oracle/middleware/odi/studio/bin`
+    Execute command: `./odi`
 
 ## Apply ODI patch for ADW ODI version
 
@@ -393,14 +383,11 @@ Instead of performing steps in section "Starting the Administration Server"
     `cd /u01/app/oracle/middleware/OPatch`
     `./opatch version`
    OPatch should be 13.3 or later
-    2. Verify the OUI Inventory. Execute this command:
-    `./opatch lsinventory -jre \$JAVA\_HOME/jre`
-   This command should NOT error out
-     3. In user oracle's home edit file ".bashrc" and add the following lines at the end:
-```
-export ORACLE\_HOME=/u01/app/oracle/middleware
-export PATH=\${ORACLE\_HOME}/OPatch:\${PATH}
-```
+    2. Verify the OUI Inventory. Execute this command (it should not error out): `./opatch lsinventory -jre \$JAVA\_HOME/jre`
+    3. In user oracle's home edit file ".bashrc" and add the following lines at the end:
+    `export ORACLE\_HOME=/u01/app/oracle/middleware`
+    `export PATH=\${ORACLE\_HOME}/OPatch:\${PATH}`
+
 3. Log out from oracle and login back again
 
 4. If you started the weblogic servers, log into weblogic server and stop all servers and processes in the domain; that is admin server and node server (JCSODICS\_server\_1 and JCSODICS\_adminserver)
