@@ -144,7 +144,6 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
      9. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
      10. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
      11. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
-
 ![](images/100/media/image2.png)
 
 7. Click on "Next" button located on the top right corner of the screen. If there is a problem with the access to the storage, an error message will be sent to screen.
@@ -193,15 +192,15 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 6. Add the following Statements
 
- a. Allow service PSM to inspect vcns in compartment \<compartment\_name\>
- b. Allow service PSM to use subnets in compartment \<compartment\_name\>
- c. Allow service PSM to use vnics in compartment \<compartment\_name\>
- d. Allow service PSM to manage security-lists in compartment \<compartment\_name\>
- e. Allow service PSM to manage all-resources in compartment \<compartment\_name\>
- f. Allow service PSM to inspect autonomous-database in compartment \<compartment\_name\>
- g. Allow service PSM to inspect database-family in compartment \<compartment\_name\>
+    1. Allow service PSM to inspect vcns in compartment \<compartment\_name\>
+    2. Allow service PSM to use subnets in compartment \<compartment\_name\>
+    3. Allow service PSM to use vnics in compartment \<compartment\_name\>
+    4. Allow service PSM to manage security-lists in compartment \<compartment\_name\>
+    5. Allow service PSM to manage all-resources in compartment \<compartment\_name\>
+    6. Allow service PSM to inspect autonomous-database in compartment \<compartment\_name\>
+    7. Allow service PSM to inspect database-family in compartment \<compartment\_name\>
 
-7\.  Click on button "Create" at the bottom of the screen
+7.  Click on button "Create" at the bottom of the screen
 
 ### **Create a Storage Bucket**
 
@@ -221,9 +220,9 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 3. Replace your information in the following URL:
 
- d. In our example region would be "us-ashburn-1"
- e. In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
- f. In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
+    1. In our example region would be "us-ashburn-1"
+    2. In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
+    3. In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
 
 So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`. Make a note of this will require it later in the process
 
@@ -264,31 +263,28 @@ Generate an authentication token for each user who created buckets or has permis
 8. Select the required space for your repository
 
 9. Select the type of license you will require
-
 ![](images/100/media/image3.png)
 
-10\. Paste your public key `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/JCS_SSH/create_sshkey.html`
+10. Paste your public key `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/JCS_SSH/create_sshkey.html`
 
-11\. On the Network Information section:
+11. On the Network Information section:
 
- a. Select the VCN you created in section "create a VCN"
- b. Select a subnet
- c. Provide a Host name prefix, like ODICS
-
+    1. Select the VCN you created in section "create a VCN"
+    2. Select a subnet
+    3. Provide a Host name prefix, like ODICS
 ![](images/100/media/image4.png)
 
-12\. On Database Information section:
+12. On Database Information section:
 
- d. Provide a DB name, like ODICSREP (less than 8 alpha numeric characters)
- e. Select a DB version, like 12.1.0.2
- f. Provide the PDB name (or leave it as default -- PDB --)
- g. Provide the administrator's password
- h. Verify that option "Automatic Backup" is selected
- i. Verify that "Database Workload" is OLTP
-
+    1. Provide a DB name, like ODICSREP (less than 8 alpha numeric characters)
+    2. Select a DB version, like 12.1.0.2
+    3. Provide the PDB name (or leave it as default -- PDB --)
+    4. Provide the administrator's password
+    5. Verify that option "Automatic Backup" is selected
+    6. Verify that "Database Workload" is OLTP
 ![](images/100/media/image5.png)
 
-13\. Click on button "Launch DB System" at the bottom of the screen
+13. Click on button "Launch DB System" at the bottom of the screen
 
 ## Provision the Oracle Java Cloud Instance for regular ODICS
 
@@ -299,33 +295,31 @@ Generate an authentication token for each user who created buckets or has permis
 3. Click on "Create Instance" button located on the top right of your screen
 
 4. Select "Java" from the drop-down list
-
 ![](images/100/media/image6.png)
 
 5. Provide:
 
- a. Instance Name. For example: JCSODICS
- b. Description
- c. Select a region. For example: us-ashburn-1
- d. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
- e. Select the subnet you created in section "Create a VCN" and is a combination of your compartment, VCN name and subnet name. For example: OSC121018 \| VCN\_ODICS \| Public Subnet lpXs: US-ASHBURN-AD-1
- f. License Type. For example: Subscribe ...
- g. Service Level. Select "Oracle Java Cloud Service Fusion Middleware -- Oracle Data Integrator"
- h. Software Edition. Select "Enterprise Edition"
-
+    1. Instance Name. For example: JCSODICS
+    2. Description
+    3. Select a region. For example: us-ashburn-1
+    4. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
+    5. Select the subnet you created in section "Create a VCN" and is a combination of your compartment, VCN name and subnet name. For example: OSC121018 \| VCN\_ODICS \| Public Subnet lpXs: US-ASHBURN-AD-1
+    6. License Type. For example: Subscribe ...
+    7. Service Level. Select "Oracle Java Cloud Service Fusion Middleware -- Oracle Data Integrator"
+    8. Software Edition. Select "Enterprise Edition"
 ![](images/100/media/image7.png)
 
-6\. Click on "Next" button located on the top right corner of the screen
+6. Click on "Next" button located on the top right corner of the screen
 
-7\. Click on "Advanced" tab
+7. Click on "Advanced" tab
 
-8\. Follow <https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1> from section "Provisioning the Oracle Java Cloud Instance" step 4 on
+8. Follow <https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1> from section "Provisioning the Oracle Java Cloud Instance" step 4 onwards.
 
 **Note:** For backup destination use the following:
 
- u. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
- v. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
- w. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
+    1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
+    2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
+    3. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
 
 ## Provision the Oracle Java Cloud Instance for ODICS for ADW
 
@@ -336,47 +330,41 @@ Generate an authentication token for each user who created buckets or has permis
 3. Click on "Create Instance" button located on the top right of your screen
 
 4. Select "Java" from the drop-down list
-
 ![](images/100/media/image6.png)
 
 5.  Provide:
 
- a. Instance Name. For example: JCSODICS
- b. Description
- c. Select a region. For example: us-ashburn-1
- d. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
- e. Select the subnet you created in section "Create a VCN" and is a combination of your compartment, VCN name and subnet name. For example: OSC121018 \| VCN\_ODICS \| Public Subnet lpXs: US-ASHBURN-AD-1
- f. License Type. For example: Subscribe ...
- g. Service Level. Select "Oracle Java Cloud Service Fusion Middleware -- Oracle Data Integrator"
- h. Software Edition. Select "Enterprise Edition"
-
+    1. Instance Name. For example: JCSODICS
+    2. Description
+    3. Select a region. For example: us-ashburn-1
+    4. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
+    5. Select the subnet you created in section "Create a VCN" and is a combination of your compartment, VCN name and subnet name. For example: OSC121018 \| VCN\_ODICS \| Public Subnet lpXs: US-ASHBURN-AD-1
+    6. License Type. For example: Subscribe ...
+    7. Service Level. Select "Oracle Java Cloud Service Fusion Middleware -- Oracle Data Integrator"
+    8. Software Edition. Select "Enterprise Edition"
 ![](images/100/media/image7.png)
 
 6. Click on "Next" button located on the top right corner of the screen
 
 7. Click on "Advanced" tab
 
-8. Follow `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1` from section "Provisioning the Oracle Java Cloud Instance" step 4 on
-
+8. Follow `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1` from section "Provisioning the Oracle Java Cloud Instance" step 4 onwards.
 **Note:** For backup destination use the following:
+     1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
+     2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
+     3. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
 
-  a. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
-  b. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
-  c. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
+ 9. Go on with section "Installing ODI on the Oracle Java Cloud Service" but in step 6 of subsection "Installing Oracle Data Integrator" (Auto Updates Screen) do the following:
 
- 9\. Go on with section "Installing ODI on the Oracle Java Cloud Service" but in step 6 of subsection "Installing Oracle Data Integrator" (Auto Updates Screen) do the following:
-
-  a. Click on \"Search My Oracle Support for updates\"
-  b. Enter username (your user name for Oracle Support)
-  c. Enter password (your password for Oracle Support)
-  d. Click on Search.
-
+     1. Click on \"Search My Oracle Support for updates\"
+     2. Enter username (your user name for Oracle Support)
+     3. Enter password (your password for Oracle Support)
+     4. Click on Search.
 ![](images/100/media/image8.png)
-
- e. Select 22384876 13.9.3 PREFLIGHT ON FMW 12.2.1.3.1
- f. Click on "Next" button
- g. Click "Yes" on the popup \"Some of the updates require restart of the installer. Do you want to continue?\"
- h. The installer will restart
+    5. Select 22384876 13.9.3 PREFLIGHT ON FMW 12.2.1.3.1
+    6. Click on "Next" button
+    7. Click "Yes" on the popup \"Some of the updates require restart of the installer. Do you want to continue?\"
+    8. The installer will restart
 
 10. On step 7, do NOT click on button "View" but otherwise continue the installation steps as provided in the document
 
@@ -392,8 +380,8 @@ Instead of performing steps in section "Starting the Administration Server"
 
 4. Before you execute the steps in the next section of the document "Starting the Servers", apply the ODI patch, following the steps in the next section
 
- a. Execute command: cd /u01/app/oracle/middleware/odi/studio/bin
- b. Execute command: ./odi
+    1. Execute command: cd /u01/app/oracle/middleware/odi/studio/bin
+    2. Execute command: ./odi
 
 ## Apply ODI patch for ADW ODI version
 
@@ -401,114 +389,82 @@ Instead of performing steps in section "Starting the Administration Server"
 
 2. Prerequisites:
 
- a. Verify your OPatch version. Execute commands:
-  i. cd /u01/app/oracle/middleware/OPatch
-  ii. ./opatch version
+    1. Verify your OPatch version. Execute commands: 
+    `cd /u01/app/oracle/middleware/OPatch`
+    `./opatch version`
    OPatch should be 13.3 or later
- b. Verify the OUI Inventory. Execute command:
-  iii. ./opatch lsinventory -jre \$JAVA\_HOME/jre
+    2. Verify the OUI Inventory. Execute this command:
+    `./opatch lsinventory -jre \$JAVA\_HOME/jre`
    This command should NOT error out
- c. In user oracle's home edit file ".bashrc" and add the following lines at the end:
-
+     3. In user oracle's home edit file ".bashrc" and add the following lines at the end:
 ```
 export ORACLE\_HOME=/u01/app/oracle/middleware
 export PATH=\${ORACLE\_HOME}/OPatch:\${PATH}
 ```
-3\. Log out from oracle and login back again
+3. Log out from oracle and login back again
 
-4\. If you started the weblogic servers, log into weblogic server and stop all servers and processes in the domain; that is admin server and node server (JCSODICS\_server\_1 and JCSODICS\_adminserver)
+4. If you started the weblogic servers, log into weblogic server and stop all servers and processes in the domain; that is admin server and node server (JCSODICS\_server\_1 and JCSODICS\_adminserver)
 
-5\. Make sure ODI Studio is NOT running
+5. Make sure ODI Studio is NOT running
 
-6\. Unzip patch "26669648"
+6. Unzip patch "26669648"
 
-7\. Navigate into the patch directory (for example: `/u01/app/oracle/tools/home/oracle/Patches/26669648`)
+7. Navigate into the patch directory (for example: `/u01/app/oracle/tools/home/oracle/Patches/26669648`)
 
-8\. Execute command: opatch apply
+8. Execute command: opatch apply
 
-9\. Once the patch is applied successfully, we need to upgrade the ODI schema repositories
+9. Once the patch is applied successfully, we need to upgrade the ODI schema repositories
 
- d. Execute command: `cd /u01/app/oracle/middleware/oracle\_common/upgrade/bin`
- e. Execute command: `./ua`
- f. Click "Next" in the ***Welcome*** screen
- g. Select "All Schemas Used By a Domain" in screen ***Selected Schemas*** (once selected the name of the screen will change to ***All Schemas***)
- h. Provide the directory of the weblogic domain:   /u01/data/domains/JCSODICS\_domain
-
+    1. Execute command: `cd /u01/app/oracle/middleware/oracle\_common/upgrade/bin`
+    2. Execute command: `./ua`
+    3. Click "Next" in the ***Welcome*** screen
+    4. Select "All Schemas Used By a Domain" in screen ***Selected Schemas*** (once selected the name of the screen will change to ***All Schemas***)
+    5. Provide the directory of the weblogic domain:   /u01/data/domains/JCSODICS\_domain
 ![](images/100/media/image9.png)
-
- i.  Click on "Next" button
- j.  The next screen, ***Component List***, will show a list of all the repositories under the selected domain that will be upgraded. Verify this is the domain you want to upgrade and that "Oracle Data Integrator" repository is in the list and click on "Next" button
-
+    6.  Click on "Next" button
+    7.  The next screen, ***Component List***, will show a list of all the repositories under the selected domain that will be upgraded. Verify this is the domain you want to upgrade and that "Oracle Data Integrator" repository is in the list and click on "Next" button
 ![](images/100/media/image10.png)
-
- k.  The ***Prerequisites*** screen is just a list of items that you must check and verify before you can proceed. Check the boxes and then click on the "Next" button
-
+    8.  The ***Prerequisites*** screen is just a list of items that you must check and verify before you can proceed. Check the boxes and then click on the "Next" button
 ![](images/100/media/image11.png)
-
 **NOTE: The Upgrade Assistant will not verify that the prerequisites have been met**
-
- l. On **[OPSS Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button
- m. The program gathers the necessary information for the following fields. Click on "Next" button
-
+    9. On **[OPSS Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button
+    10. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image12.png)
-
- n. On **[ODI Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button
- o. The program gathers the necessary information for the following fields. Click on "Next" button
-
+    11. On **[ODI Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button
+    12. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image13.png)
-
- p. On ODI Options screen, select all the options available and then click on "Next" button
-
+    13. On ODI Options screen, select all the options available and then click on "Next" button
 ![](images/100/media/image14.png)
-
- q. On screen ***ODI Supervisor***, provide:
-  iv. ODI Supervisor name: SUPERVISOR
-  v. ODI Supervisor Password: the password assigned to the SUPERVISOR user (for example Welcome\#1)
- r. Once the information has been provided, click on the "Next" button
-
+    14. On screen ***ODI Supervisor***, provide: ODI Supervisor name: `SUPERVISOR`, ODI Supervisor Password: the password assigned to the SUPERVISOR user (for example Welcome\#1)
+    15. Once the information has been provided, click on the "Next" button
 ![](images/100/media/image15.png)
-
- s. On **[MDS Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
- t. The program gathers the necessary information for the following fields. Click on "Next" button
-
+    16. On **[MDS Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
+    17. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image16.png)
-
- u. On **[IAU Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
- v. The program gathers the necessary information for the following fields. Click on "Next" button
-
+    18. On **[IAU Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
+    19. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image17.png)
-
- w. On **[STB Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
- x. The program gathers the necessary information for the following fields. Click on "Next" button
-
+    20. On **[STB Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
+    21. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image18.png)
- y. On **[WLS Schema]{.underline}** screen, provide the DB admin user (SYS) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
- z. The program gathers the necessary information for the following fields. Click on "Next" button
-
+    22. On **[WLS Schema]{.underline}** screen, provide the DB admin user (SYS) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
+    23. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image19.png)
-
- a. The Examine screen will provide a list of the available components and if they require or not and are ready or not for the upgrade. Click on the "Next" button
-
+    24. The Examine screen will provide a list of the available components and if they require or not and are ready or not for the upgrade. Click on the "Next" button
 ![](images/100/media/image20.png)
-
- b. The ***Upgrade Summary*** screen will provide all the information about the processes that will be performed and the schemas in which they will be performed. Click on the "Upgrade" button to start the upgrade process, this will take some time so be patient
-
+    25. The ***Upgrade Summary*** screen will provide all the information about the processes that will be performed and the schemas in which they will be performed. Click on the "Upgrade" button to start the upgrade process, this will take some time so be patient
 ![](images/100/media/image21.png)
-
- c. The ***Upgrade Progress*** screens shows information about the progress of the upgrade. Click on the "Next" button
-
+    26. The ***Upgrade Progress*** screens shows information about the progress of the upgrade. Click on the "Next" button
 ![](images/100/media/image22.png)
-
- d. The ***Upgrade Success*** screen summarizes the upgrade. Click on "Close" button
-
+    27. The ***Upgrade Success*** screen summarizes the upgrade. Click on "Close" button
 ![](images/100/media/image23.png)
 
 10. Clearing of the JDev cache is required.
 
- e. Execute command: `cd /u01/app/oracle/tools/home/oracle/.odi`
- f. Execute command: `rm -rf system12.2.1.3.0`
+    1. Execute command: `cd /u01/app/oracle/tools/home/oracle/.odi`
+    2. Execute command: `rm -rf system12.2.1.3.0`
 
-11\. Return to web document `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html` section "Post-Configuration Tasks".
+11. Return to web document `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html` section "Post-Configuration Tasks".
 
 ## Appendix A - VCN
 
