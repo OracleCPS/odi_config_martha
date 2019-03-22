@@ -7,27 +7,41 @@ Log into Oracle cloud and navigate to OCI
 ### **Create a Compartment**
 
 1.  Navigate Menu \> Identity \> Compartments
+
 2.  Click on button "Create Compartment" at the top of the screen
+
 3.  Provide a name. For example: OSC121018odics
+
 4.  Click on button "Create Compartment" at the bottom of the screen
 
 ### **Create a VCN (Virtual Cloud Network)**
 
 1.  Navigate Menu \> Networking \> Virtual Cloud Networks
+
 2.  Verify that your compartment is selected in the compartment drop down menu on the left side of your screen
+
 3.  Click on button "Virtual Cloud Network" at the top of the screen
+
 4.  Select your compartment
+
 5.  Provide a name. For example: VCN\_ODICS
+
 6.  Select "Create Virtual Cloud Network plus related resources", this will default the options
+
 7.  Click on button "Create Virtual Cloud Network" at the bottom of the screen
 
 ### **Create a Policy to Permit Oracle Platform Services to create instances in your VCN**
 
 1.  Navigate Menu \> Identity \> Policies
+
 2.  Click on button "Create Policy" at the top of the screen
+
 3.  Provide name. For example: osc121018VCNpolicy
+
 4.  Provide description
+
 5.  Leave "Keep Policy Current"
+
 6.  Add the following Statements
 
  a. Allow service PSM to inspect vcns in compartment \<compartment\_name\>
@@ -41,14 +55,19 @@ Log into Oracle cloud and navigate to OCI
 ### **Create a Storage Bucket**
 
 1.  Navigate Menu \> Object Storage \> Object Storage
+
 2.  Verify that your compartment is selected in the compartment drop down menu on the left side of your screen
+
 3.  Click on button "Create Bucket" at the top of the screen
+
 4.  Provide a name. For example: ODICS\_STORAGE1
+
 5.  Click on button "Create Bucket" at the bottom of the screen
 
 ### **Create the URL to the Storage Bucket**
 
 1.  While you are in the Storage Bucket screen copy the URL on top of your browser. It should look something like: <https://console.us-ashburn-1.oraclecloud.com/a/storage/objects>
+
 2.  Replace your information in the following URL: 
 
  a.  In our example region would be "us-ashburn-1"
@@ -60,27 +79,45 @@ So the URL will look something like: <https://swiftobjectstorage.us-ashburn-1.or
 ### **Setup credential to have access to the bucket**
 
 1.  Navigate Menu: Identity > Users
+
 2.  Click on button "Create User" at the top of the screen
+
 3.  Provide name (use format name.lastname@company.com. For example: martha.aguilar@oracle.com
+
 4.  Provide description
+
 5.  Click on button "Create" at the bottom of the screen
+
 6.  Drilldown in the user you just created
+
 7.  Navigate to "Auth Tokens" (look for the hyperlink on the bottom left of the screen)
+
 8.  Click on button "Generate Token"
+
 9.  Provide description
+
 10. Click on button "Generate Token" at the bottom of the screen
+
 11. Make a note of the token immediately. [You will NOT be able to retrieve it again]{.underline} after closing the dialog box, you will require it later in the process
+
 12. Navigate to "Groups" (look for the hyperlink on the bottom left of the screen)
+
 13. Click on button "Add User to Group"
+
 14. From the groups drop down select "Administrators"
+
 15. Click on button "Add" at the bottom of the screen
 
 ## Create a DBCS in OCI
 
 1.  Navigate to your services dashboard
+
 2.  Navigate to "Database Classic" console
+
 3.  Click on "Create Instance" button located on the top right of your screen
+
 4.  Provide:
+
  a.  Name. For example: DBCS-ODICS. Make a note of this
  b.  Description
  c.  Select a region. For example: us-ashburn-1
@@ -94,7 +131,9 @@ So the URL will look something like: <https://swiftobjectstorage.us-ashburn-1.or
 ![](images/100/media/image1.png){width="6.5in" height="2.64375in"}
 
 5.  Click on "Next" button located on the top right corner of the screen
+
 6.  Provide:
+
  a.  DB Name. Leave default (ORCL). Make a note of this
  b.  PDB Name. Leave default (PDB1). Make a note of this
  c.  Administration Password. Provide your password. Make a note of this
@@ -107,7 +146,9 @@ So the URL will look something like: <https://swiftobjectstorage.us-ashburn-1.or
  j.  Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: <martha.aguilar@oracle.com>
  k.  Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
 ![](images/100/media/image2.png){width="6.5in" height="2.6131944444444444in"}
+
 7.  Click on "Next" button located on the top right corner of the screen. If there is a problem with the access to the storage, an error message will be sent to screen.
+
 8.  If all verifications went OK, you will be in the Summary screen. Click on "Create" button. This process will take around 30 min
 
 ## Prerequisites for a DBaaS in OCI
@@ -115,28 +156,43 @@ So the URL will look something like: <https://swiftobjectstorage.us-ashburn-1.or
 ### **Create a Compartment**
 
 1.  Navigate Menu \> Identity \> Compartments
+
 2.  Click on button "Create Compartment" at the top of the screen
+
 3.  Provide a name. For example: OSC121018odics
+
 4.  Click on button "Create Compartment" at the bottom of the screen
 
 ### **Create a VCN (Virtual Cloud Network)**
 
 1.  Navigate Menu \> Networking \> Virtual Cloud Networks
+
 2.  Verify that your compartment is selected in the compartment drop down menu on the left side of your screen
+
 3.  Click on button "Virtual Cloud Network" at the top of the screen
+
 4.  Select your compartment
+
 5.  Provide a name. For example: VCN\_ODICS
+
 6.  Select "Create Virtual Cloud Network plus related resources", this will default the options
+
 7.  Click on button "Create Virtual Cloud Network" at the bottom of the screen
 
 ### **Create a Policy to Permit Oracle Platform Services to create instances in your VCN**
 
 1.  Navigate Menu \> Identity \> Policies
+
 2.  Click on button "Create Policy" at the top of the screen
+
 3.  Provide name. For example: osc121018VCNpolicy
+
 4.  Provide description
+
 5.  Leave "Keep Policy Current"
+
 6.  Add the following Statements
+
  a.  Allow service PSM to inspect vcns in compartment \<compartment\_name\>
  b.  Allow service PSM to use subnets in compartment \<compartment\_name\>
  c.  Allow service PSM to use vnics in compartment \<compartment\_name\>
@@ -145,20 +201,26 @@ So the URL will look something like: <https://swiftobjectstorage.us-ashburn-1.or
  f.  Allow service PSM to inspect autonomous-database in compartment \<compartment\_name\>
  g.  Allow service PSM to inspect database-family in compartment \<compartment\_name\>
 
-7.  Click on button "Create" at the bottom of the screen
+7\.  Click on button "Create" at the bottom of the screen
 
 ### **Create a Storage Bucket**
 
 1.  Navigate Menu \> Object Storage \> Object Storage
+
 2.  Verify that your compartment is selected in the compartment drop down menu on the left side of your screen
+
 3.  Click on button "Create Bucket" at the top of the screen
+
 4.  Provide a name. For example: ODICS\_STORAGE1
+
 5.  Click on button "Create Bucket" at the bottom of the screen
 
 ### **Create the URL to the Storage Bucket**
 
 1.  While you are in the Storage Bucket screen copy the URL on top of your browser. It should look something like: <https://console.us-ashburn-1.oraclecloud.com/a/storage/objects>
+
 3.  Replace your information in the following URL: \>
+
  d.  In our example region would be "us-ashburn-1"
  e.  In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
  f.  In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
@@ -172,26 +234,43 @@ PaaS services need an authentication token to access Oracle Cloud Infrastructure
 Generate an authentication token for each user who created buckets or has permission to access them. For example, if java\_user created a bucket for Java Cloud Service, and db\_user created a bucket for Database Cloud Service, then generate a separate authentication token for each of these users. If the same user created both the buckets or can access both buckets, then generate a single authentication token for that user.
 
 1.  Sign in to the Oracle Cloud Infrastructure web console as the user who created the buckets or has permission to access them.
+
 2.  Click the user icon at the upper right corner, and from the menu that appears, select User Settings.
+
 3.  User Settings menu option
+
 4.  In the Resources navigation pane, click Auth Tokens, and then click Generate Token.
+
 5.  In the Generate Token dialog box, enter a description for the token, and then click Generate Token.
+
 6.  Copy and store the generated token immediately. [You will NOT be able to retrieve it again]{.underline} after closing the dialog box, you will require it later in the process.
 
 ## Create a DBaaS
 
 1.  Navigate Menu \> Bare Metal, VM, and Exadata
+
 2.  Click on button "Launch DB System" at the top of the screen
+
 3.  Provide a name. For example: ODICS\_Repo
+
 4.  Provide an availability domain
+
 5.  Leave the shape type as "Virtual Machine"
+
 6.  Select the shape
+
 7.  Select "Enterprise Edition" as the Oracle database software edition
+
 8.  Select the required space for your repository
+
 9.  Select the type of license you will require
+
 > ![](images/100/media/image3.png){width="3.5208333333333335in" height="3.7664555993000874in"}
+
 10. Paste your public key (<https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/JCS_SSH/create_sshkey.html> )
+
 11. On the Network Information section:
+
  a.  Select the VCN you created in section "create a VCN"
  b.  Select a subnet
  c.  Provide a Host name prefix, like ODICS
@@ -199,6 +278,7 @@ Generate an authentication token for each user who created buckets or has permis
 ![](images/100/media/image4.png){width="3.8020833333333335in" height="2.8070308398950132in"}
 
 12\. On Database Information section:
+
  d.  Provide a DB name, like ODICSREP (less than 8 alpha numeric characters)
  e.  Select a DB version, like 12.1.0.2
  f.  Provide the PDB name (or leave it as default -- PDB --)
@@ -206,16 +286,23 @@ Generate an authentication token for each user who created buckets or has permis
  h.  Verify that option "Automatic Backup" is selected
  i.  Verify that "Database Workload" is OLTP
 ![](images/100/media/image5.png){width="3.4256944444444444in" height="4.104166666666667in"}
+
 13\. Click on button "Launch DB System" at the bottom of the screen
 
 ## Provision the Oracle Java Cloud Instance for regular ODICS
 
 1.  Navigate to your services dashboard
+
 2.  Navigate to "Java" console
+
 3.  Click on "Create Instance" button located on the top right of your screen
+
 4.  Select "Java" from the drop-down list
+
 ![](images/100/media/image6.png){width="6.5in" height="1.9506944444444445in"}
+
 5.  Provide:
+
  a.  Instance Name. For example: JCSODICS
  b.  Description
  c.  Select a region. For example: us-ashburn-1
@@ -225,14 +312,18 @@ Generate an authentication token for each user who created buckets or has permis
  g.  Service Level. Select "Oracle Java Cloud Service Fusion Middleware -- Oracle Data Integrator"
  h.  Software Edition. Select "Enterprise Edition"
 ![](images/100/media/image7.png){width="6.5in" height="2.9756944444444446in"}
+
 6\.  Click on "Next" button located on the top right corner of the screen
+
 7\.  Click on "Advanced" tab
+
 8\.  Follow <https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1> from section "Provisioning the Oracle Java Cloud Instance" step 4 on
 
 **Note:** For backup destination use the following:
-u.  Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: <https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1>
-v.  Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: <martha.aguilar@oracle.com>
-w.  Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
+
+ u.  Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: <https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1>
+ v.  Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: <martha.aguilar@oracle.com>
+ w.  Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
 
 ## Provision the Oracle Java Cloud Instance for ODICS for ADW
 
