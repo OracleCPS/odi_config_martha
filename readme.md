@@ -70,9 +70,9 @@ Log into Oracle cloud and navigate to OCI
 
 2. Replace your information in the following URL: 
 
- 1. In our example region would be "us-ashburn-1"
- 2. In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
- 3. In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
+    1. In our example region would be "us-ashburn-1"
+    2. In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
+    3. In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
 
 So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`. Make a note of this will require it later in the process
 
@@ -118,15 +118,15 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 4. Provide:
 
-    a. Name. For example: DBCS-ODICS. Make a note of this
-    b. Description
-    c. Select a region. For example: us-ashburn-1
-    d. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
-    e. Select the subnet you created in section that is a combination of your compartment, VCN name and subnet name. For example: `OSC121018 | VCN_ODICS | Public Subnet lpXs: US-ASHBURN-AD-1`
-    f. License Type. For example: `Subscribe ...`
-    g. Software Release. For example: `Oracle Database 12c Release 2`
-    h. Software Edition. For example: `Enterprise edition`
-    i. Database type. For example: `Single Instance`
+    1. Name. For example: DBCS-ODICS. Make a note of this
+    2. Description
+    3. Select a region. For example: us-ashburn-1
+    4. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
+    5. Select the subnet you created in section that is a combination of your compartment, VCN name and subnet name. For example: `OSC121018 | VCN_ODICS | Public Subnet lpXs: US-ASHBURN-AD-1`
+    6. License Type. For example: `Subscribe ...`
+    7. Software Release. For example: `Oracle Database 12c Release 2`
+    8. Software Edition. For example: `Enterprise edition`
+    9. Database type. For example: `Single Instance`
 
 ![](images/100/media/image1.png)
 
@@ -134,23 +134,23 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 6. Provide:
 
-  a. DB Name. Leave default (ORCL). Make a note of this
-  b. PDB Name. Leave default (PDB1). Make a note of this
-  c. Administration Password. Provide your password. Make a note of this
-  d. Confirm Password.
-  e. Usable Database Storage. For example: 100
-  f. Compute Shape. For example: VM.Standard2.2 -- 2.0 OCPU, 30 GB RAM
-  g. SSH Public Key. Either generate and save your keys or navigate and upload your public key
-  h. Backup Destination. Select "Both Cloud Storage and Local Storage"
-  i. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
-  j. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
-  k. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
+     1. DB Name. Leave default (ORCL). Make a note of this
+     2. PDB Name. Leave default (PDB1). Make a note of this
+     3. Administration Password. Provide your password. Make a note of this
+     4. Confirm Password.
+     5. Usable Database Storage. For example: 100
+     6. Compute Shape. For example: VM.Standard2.2 -- 2.0 OCPU, 30 GB RAM
+     7. SSH Public Key. Either generate and save your keys or navigate and upload your public key
+     8. Backup Destination. Select "Both Cloud Storage and Local Storage"
+     9. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
+     10. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
+     11. Password. Provide the OAuth Token generated in section "**Setup credential to have access to the bucket**" step 10
 
 ![](images/100/media/image2.png)
 
-7\. Click on "Next" button located on the top right corner of the screen. If there is a problem with the access to the storage, an error message will be sent to screen.
+7. Click on "Next" button located on the top right corner of the screen. If there is a problem with the access to the storage, an error message will be sent to screen.
 
-8\. If all verifications went OK, you will be in the Summary screen. Click on "Create" button. This process will take around 30 min
+8. If all verifications went OK, you will be in the Summary screen. Click on "Create" button. This process will take around 30 min
 
 ## Prerequisites for a DBaaS in OCI
 
