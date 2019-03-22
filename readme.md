@@ -29,14 +29,12 @@ Log into Oracle cloud and navigate to OCI
 4.  Provide description
 5.  Leave "Keep Policy Current"
 6.  Add the following Statements
-```
-Allow service PSM to inspect vcns in compartment \<compartment\_name\>
-Allow service PSM to use subnets in compartment \<compartment\_name\>
-Allow service PSM to use vnics in compartment \<compartment\_name\>
-Allow service PSM to manage security-lists in compartment \<compartment\_name\>
-Allow service PSM to manage all-resources in compartment \<compartment\_name\>
-```
-7.  Click on button "Create" at the bottom of the screen
+ Allow service PSM to inspect vcns in compartment \<compartment\_name\>
+ Allow service PSM to use subnets in compartment \<compartment\_name\>
+ Allow service PSM to use vnics in compartment \<compartment\_name\>
+ Allow service PSM to manage security-lists in compartment \<compartment\_name\>
+ Allow service PSM to manage all-resources in compartment \<compartment\_name\>
+7\.  Click on button "Create" at the bottom of the screen
 
 ### **Create a Storage Bucket**
 
