@@ -348,16 +348,16 @@ Generate an authentication token for each user who created buckets or has permis
 
 8. Follow `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1` from section "Provisioning the Oracle Java Cloud Instance" step 4 onwards.
 **Note:** For backup destination use the following:
-     1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
-     2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
-     3. Password. Provide the OAuth Token generated in section `Setup credential to have access to the bucket` step 10.
+    1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
+    2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
+    3. Password. Provide the OAuth Token generated in section `Setup credential to have access to the bucket` step 10.
 
  9. Go on with section "Installing ODI on the Oracle Java Cloud Service" but in step 6 of subsection "Installing Oracle Data Integrator" (Auto Updates Screen) do the following:
 
-     1. Click on `Search My Oracle Support for updates`
-     2. Enter username (your user name for Oracle Support)
-     3. Enter password (your password for Oracle Support)
-     4. Click on Search.
+    1. Click on `Search My Oracle Support for updates`
+    2. Enter username (your user name for Oracle Support)
+    3. Enter password (your password for Oracle Support)
+    4. Click on Search.
 ![](images/100/media/image8.png)
     5. Select 22384876 13.9.3 PREFLIGHT ON FMW 12.2.1.3.1
     6. Click on "Next" button
