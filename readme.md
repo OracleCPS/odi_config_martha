@@ -313,7 +313,7 @@ Generate an authentication token for each user who created buckets or has permis
 
 7. Click on "Advanced" tab
 
-8. Follow <https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1> from section "Provisioning the Oracle Java Cloud Instance" step 4 onwards.
+8. Follow `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html#section1` from section "Provisioning the Oracle Java Cloud Instance" step 4 onwards.
 **Note:** For backup destination use the following:
     1. Cloud Storage Container. Provide the value you put together in section "**Create the URL to the Storage Bucket**". For example: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`
     2. Username. Provide the user created in section "**Setup credential to have access to the bucket**". For example: `martha.aguilar@oracle.com`
