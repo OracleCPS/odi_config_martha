@@ -6,7 +6,7 @@ Log into Oracle cloud and navigate to OCI
 
 ### **Create a Compartment**
 
-1.  Navigate Menu \> Identity \> Compartments
+1.  Navigate Menu: Identity > Compartments
 
 2.  Click on button "Create Compartment" at the top of the screen
 
@@ -16,7 +16,7 @@ Log into Oracle cloud and navigate to OCI
 
 ### **Create a VCN (Virtual Cloud Network)**
 
-1.  Navigate Menu \> Networking \> Virtual Cloud Networks
+1.  Navigate Menu: Networking > Virtual Cloud Networks
 
 2.  Verify that your compartment is selected in the compartment drop down menu on the left side of your screen
 
@@ -32,7 +32,7 @@ Log into Oracle cloud and navigate to OCI
 
 ### **Create a Policy to Permit Oracle Platform Services to create instances in your VCN**
 
-1.  Navigate Menu \> Identity \> Policies
+1.  Navigate Menu: Identity > Policies
 
 2.  Click on button "Create Policy" at the top of the screen
 
