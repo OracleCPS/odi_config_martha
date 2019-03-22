@@ -98,7 +98,7 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 10. Click on button "Generate Token" at the bottom of the screen
 
-11. Make a note of the token immediately. [You will NOT be able to retrieve it again]{.underline} after closing the dialog box, you will require it later in the process
+11. Make a note of the token immediately. **You will NOT be able to retrieve it again** after closing the dialog box, you will require it later in the process
 
 12. Navigate to "Groups" (look for the hyperlink on the bottom left of the screen)
 
@@ -122,11 +122,11 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
  b. Description
  c. Select a region. For example: us-ashburn-1
  d. Select an availability domain. For example: lpXs: US-ASHBURN-AD-1
- e. Select the subnet you created in section that is a combination of your compartment, VCN name and subnet name. For example: OSC121018 \| VCN\_ODICS \| Public Subnet lpXs: US-ASHBURN-AD-1
- f. License Type. For example: Subscribe ...
- g. Software Release. For example: Oracle Database 12c Release 2
- h. Software Edition. For example: Enterprise edition
- i. Database type. For example: Single Instance
+ e. Select the subnet you created in section that is a combination of your compartment, VCN name and subnet name. For example: `OSC121018 | VCN_ODICS | Public Subnet lpXs: US-ASHBURN-AD-1`
+ f. License Type. For example: `Subscribe ...`
+ g. Software Release. For example: `Oracle Database 12c Release 2`
+ h. Software Edition. For example: `Enterprise edition`
+ i. Database type. For example: `Single Instance`
 
 ![](images/100/media/image1.png)
 
@@ -160,7 +160,7 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 2. Click on button "Create Compartment" at the top of the screen
 
-3. Provide a name. For example: OSC121018odics
+3. Provide a name. For example: `OSC121018odics`
 
 4. Click on button "Create Compartment" at the bottom of the screen
 
@@ -174,7 +174,7 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 4. Select your compartment
 
-5. Provide a name. For example: VCN\_ODICS
+5. Provide a name. For example: `VCN_ODICS`
 
 6. Select "Create Virtual Cloud Network plus related resources", this will default the options
 
@@ -186,7 +186,7 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 2. Click on button "Create Policy" at the top of the screen
 
-3. Provide name. For example: osc121018VCNpolicy
+3. Provide name. For example: `osc121018VCNpolicy`
 
 4. Provide description
 
@@ -218,7 +218,7 @@ So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.or
 
 ### **Create the URL to the Storage Bucket**
 
-1. While you are in the Storage Bucket screen copy the URL on top of your browser. It should look something like: <https://console.us-ashburn-1.oraclecloud.com/a/storage/objects>
+1. While you are in the Storage Bucket screen copy the URL on top of your browser. It should look something like: `https://console.us-ashburn-1.oraclecloud.com/a/storage/objects`
 
 3. Replace your information in the following URL:
 
@@ -244,7 +244,7 @@ Generate an authentication token for each user who created buckets or has permis
 
 5. In the Generate Token dialog box, enter a description for the token, and then click Generate Token.
 
-6. Copy and store the generated token immediately. [You will NOT be able to retrieve it again]{.underline} after closing the dialog box, you will require it later in the process.
+6. Copy and store the generated token immediately. **You will NOT be able to retrieve it again** after closing the dialog box, you will require it later in the process.
 
 ## Create a DBaaS
 
@@ -252,15 +252,15 @@ Generate an authentication token for each user who created buckets or has permis
 
 2. Click on button "Launch DB System" at the top of the screen
 
-3. Provide a name. For example: ODICS\_Repo
+3. Provide a name. For example: `ODICS_Repo`
 
 4. Provide an availability domain
 
-5. Leave the shape type as "Virtual Machine"
+5. Leave the shape type as `Virtual Machine`
 
 6. Select the shape
 
-7. Select "Enterprise Edition" as the Oracle database software edition
+7. Select `Enterprise Edition` as the Oracle database software edition
 
 8. Select the required space for your repository
 
@@ -268,9 +268,9 @@ Generate an authentication token for each user who created buckets or has permis
 
 ![](images/100/media/image3.png)
 
-10. Paste your public key (`https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/JCS_SSH/create_sshkey.html`)
+10\. Paste your public key `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/JCS_SSH/create_sshkey.html`
 
-11. On the Network Information section:
+11\. On the Network Information section:
 
  a. Select the VCN you created in section "create a VCN"
  b. Select a subnet
