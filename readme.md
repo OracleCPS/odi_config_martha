@@ -70,9 +70,9 @@ Log into Oracle cloud and navigate to OCI
 
 2. Replace your information in the following URL: 
 
-    2.1 In our example region would be "us-ashburn-1"
-    2.2 In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
-    2.3 In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
+    2.1. In our example region would be "us-ashburn-1"
+    2.2. In our example namespace would be "oscnas001" (your tenancy). Click on the icon that looks like a person on the top right of your screen and you will be able to see your tenancy
+    2.3. In our example container would be "ODICS\_STORAGE1". The Storage Bucket you just created
 
 So the URL will look something like: `https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/oscnas001/ODICS_STORAGE1`. Make a note of this will require it later in the process
 
