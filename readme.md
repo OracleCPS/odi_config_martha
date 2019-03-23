@@ -44,11 +44,11 @@ Log into Oracle cloud and navigate to OCI
 
 6. Add the following Statements
 
-    6.1 Allow service PSM to inspect vcns in compartment \<compartment\_name\>
-    6.2 Allow service PSM to use subnets in compartment \<compartment\_name\>
-    6.3 Allow service PSM to use vnics in compartment \<compartment\_name\>
-    6.4 Allow service PSM to manage security-lists in compartment \<compartment\_name\>
-    6.5 Allow service PSM to manage all-resources in compartment \<compartment\_name\>
+    1. Allow service PSM to inspect vcns in compartment \<compartment\_name\>
+    2. Allow service PSM to use subnets in compartment \<compartment\_name\>
+    3. Allow service PSM to use vnics in compartment \<compartment\_name\>
+    4. Allow service PSM to manage security-lists in compartment \<compartment\_name\>
+    5. Allow service PSM to manage all-resources in compartment \<compartment\_name\>
 
 7. Click on button "Create" at the bottom of the screen
 
