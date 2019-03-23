@@ -359,6 +359,7 @@ Generate an authentication token for each user who created buckets or has permis
     3. Enter password (your password for Oracle Support)
     4. Click on Search.
 ![](images/100/media/image8.png)
+
     5. Select 22384876 13.9.3 PREFLIGHT ON FMW 12.2.1.3.1
     6. Click on "Next" button
     7. Click "Yes" on the popup \"Some of the updates require restart of the installer. Do you want to continue?\"
@@ -366,8 +367,8 @@ Generate an authentication token for each user who created buckets or has permis
 
 10. On step 7, do NOT click on button "View" but otherwise continue the installation steps as provided in the document
 **Important Note**  Instead of performing steps in section "Starting the Administration Server"
-    1. Execute command: cd /u01/data/domains/JCSODICS\_domain/bin
-    2. Execute command: ./startWebLogic.sh &
+    1. Execute command: `cd /u01/data/domains/JCSODICS\_domain/bin`
+    2. Execute command: `./startWebLogic.sh &`
     3. Continue to the next section of the web document `https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/FMW_UpperStack_on_JCS/odi_on_jcs_obe/provisioning_oracle_data_integrator_cloud_service.html` "Post-Configuration Tasks".
     4. Before you execute the steps in the next section of the document "Starting the Servers", apply the ODI patch, following the steps in the next section
     Execute command: `cd /u01/app/oracle/middleware/odi/studio/bin`
