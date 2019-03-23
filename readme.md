@@ -409,41 +409,55 @@ Generate an authentication token for each user who created buckets or has permis
     4. Select "All Schemas Used By a Domain" in screen ***Selected Schemas*** (once selected the name of the screen will change to ***All Schemas***)
     5. Provide the directory of the weblogic domain:   /u01/data/domains/JCSODICS\_domain
 ![](images/100/media/image9.png)
+
     6.  Click on "Next" button
     7.  The next screen, ***Component List***, will show a list of all the repositories under the selected domain that will be upgraded. Verify this is the domain you want to upgrade and that "Oracle Data Integrator" repository is in the list and click on "Next" button
 ![](images/100/media/image10.png)
+
     8.  The ***Prerequisites*** screen is just a list of items that you must check and verify before you can proceed. Check the boxes and then click on the "Next" button
 ![](images/100/media/image11.png)
+
 **NOTE: The Upgrade Assistant will not verify that the prerequisites have been met**
     9. On **[OPSS Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button
     10. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image12.png)
+
     11. On **[ODI Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button
     12. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image13.png)
+
     13. On ODI Options screen, select all the options available and then click on "Next" button
 ![](images/100/media/image14.png)
+
     14. On screen ***ODI Supervisor***, provide: ODI Supervisor name: `SUPERVISOR`, ODI Supervisor Password: the password assigned to the SUPERVISOR user (for example Welcome\#1)
     15. Once the information has been provided, click on the "Next" button
 ![](images/100/media/image15.png)
+
     16. On **[MDS Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
     17. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image16.png)
+
     18. On **[IAU Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
     19. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image17.png)
+
     20. On **[STB Schema]{.underline}** screen, provide the DB admin user (SYS as sysdba) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
     21. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image18.png)
+
     22. On **[WLS Schema]{.underline}** screen, provide the DB admin user (SYS) and its password, then click the "Connect" button (if users and passwords are the same as the previous screens, the application will automatically provide them)
     23. The program gathers the necessary information for the following fields. Click on "Next" button
 ![](images/100/media/image19.png)
+
     24. The Examine screen will provide a list of the available components and if they require or not and are ready or not for the upgrade. Click on the "Next" button
 ![](images/100/media/image20.png)
+
     25. The ***Upgrade Summary*** screen will provide all the information about the processes that will be performed and the schemas in which they will be performed. Click on the "Upgrade" button to start the upgrade process, this will take some time so be patient
 ![](images/100/media/image21.png)
+
     26. The ***Upgrade Progress*** screens shows information about the progress of the upgrade. Click on the "Next" button
 ![](images/100/media/image22.png)
+
     27. The ***Upgrade Success*** screen summarizes the upgrade. Click on "Close" button
 ![](images/100/media/image23.png)
 
